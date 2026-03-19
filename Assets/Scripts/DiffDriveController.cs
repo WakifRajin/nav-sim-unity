@@ -28,8 +28,8 @@ public class DiffDriveController : MonoBehaviour
 
         // Differential Logic:
         // To turn right (D), the left wheels go faster and right wheels go slower (or reverse)
-        float leftPower = (move + steer * steeringSensitivity) * motorTorque;
-        float rightPower = (move - steer * steeringSensitivity) * motorTorque;
+        float leftPower = (move - steer * steeringSensitivity) * motorTorque;
+        float rightPower = (move + steer * steeringSensitivity) * motorTorque;
 
         // Apply Torque
         frontLeft.motorTorque = leftPower;
